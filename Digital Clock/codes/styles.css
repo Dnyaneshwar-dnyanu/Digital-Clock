@@ -1,0 +1,89 @@
+body {
+     height: 100vh;
+     width: 100vw;
+     margin: 0;
+     padding: 0;
+
+     background-color: black;
+     color: white;
+}
+
+@font-face {
+     font-family: 'DS-Digital';
+     src: url('/fonts/ds_digital/DS-DIGIT.TTF') format('truetype');
+}
+
+.header {
+     text-align: center;
+     letter-spacing: 10px;
+     padding-top: 10px;
+     margin: auto;
+     font-size: 5rem;
+     font-family: 'DS-Digital';
+     color: rgba(13, 66, 126, 0.59);
+}
+
+.clock {
+     width: 540px;
+     height: 150px;
+     margin: auto;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     border-radius: 10px;
+
+     animation: glow 1s infinite ease-in-out;
+}
+
+@keyframes glow {
+     0% { box-shadow: 0 0 10px cyan;}
+     50% { box-shadow: 0 0 20px red;}
+     100% {box-shadow: 0 0 10px cyan;}
+}
+
+.days {
+     display: inline-block;
+     margin: 10px -30px 10px -10px;
+     color: rgb(67, 69, 69);
+}
+
+.active {
+     color: white;
+     font-size: large;
+}
+
+.time {
+     display: inline-block;
+     font-family: 'Ds-Digital', sans-serif;
+     font-size: 150px;
+     margin-right: -10px;
+}
+
+.amPm {
+     display: inline-block;
+     font-size: 18px;
+}
+
+.hours, .second, .minute {
+     display: inline-block;
+}
+
+.second {
+     animation: blink 1s infinite ;   
+}
+
+@keyframes blink {
+     0% {
+          opacity: 2;
+     }
+     50% {
+          opacity: 0;
+     }
+     100% {
+          opacity: 1;
+     }
+}
